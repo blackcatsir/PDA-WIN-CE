@@ -1,0 +1,1267 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1C723EB-8DD4-465C-9DA0-27A76ADA9FBC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationIcon>20141012101920603_easyicon_net_48.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PDACollect</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OutputFileFolder>\Program Files\MESXJ01H</OutputFileFolder>
+    <RootNamespace>RTDMes.Forms</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <FormFactorID>
+    </FormFactorID>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <DeployDirSuffix>$(AssemblyName)</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CompactFormatterPlus, Version=1.0.2892.21304, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\CompactFormatterPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Message, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Message.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PDAService\EPDAServiceProxy.cs" />
+    <Compile Include="ProcessUtil.cs" />
+    <Compile Include="SocketClientLibrary\ESocketServiceProxy.cs" />
+    <Compile Include="ST\COP发货_S206\COPOutS206.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\COP发货_S206\COPOutS206.designer.cs">
+      <DependentUpon>COPOutS206.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\COP发货_S206\COPOutS206Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\COP发货_S206\COPOutS206Select.designer.cs">
+      <DependentUpon>COPOutS206Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IP设置\ValidationPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDAService\PDAServiceProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ST\SMT发料\FrmSMTGI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\SMT发料\FrmSMTGI.designer.cs">
+      <DependentUpon>FrmSMTGI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketClientLibrary\MessageBlockClient.cs" />
+    <Compile Include="SocketClientLibrary\Net\DataBlock.cs" />
+    <Compile Include="SocketClientLibrary\Net\DisposableAndStartableBase.cs" />
+    <Compile Include="SocketClientLibrary\Net\DisposableBase.cs" />
+    <Compile Include="SocketClientLibrary\Net\HeartBeatChecker.cs" />
+    <Compile Include="SocketClientLibrary\Net\MessageBlock.cs" />
+    <Compile Include="SocketClientLibrary\Net\MyConvert.cs" />
+    <Compile Include="SocketClientLibrary\Net\NetDebuger.cs" />
+    <Compile Include="SocketClientLibrary\Net\NetException.cs" />
+    <Compile Include="SocketClientLibrary\Net\Startable.cs" />
+    <Compile Include="SocketClientLibrary\Net\Tcp\MessageBlockClient.cs" />
+    <Compile Include="SocketClientLibrary\Net\Tcp\MessageBlockSession.cs" />
+    <Compile Include="SocketClientLibrary\Net\Tcp\TcpClientBase.cs" />
+    <Compile Include="SocketClientLibrary\Net\Tcp\TcpEventArgs.cs" />
+    <Compile Include="SocketClientLibrary\Net\Tcp\TcpSession.cs" />
+    <Compile Include="SocketClientLibrary\Net\TEventArgs.cs" />
+    <Compile Include="SocketClientLibrary\SocketServiceProxy.cs" />
+    <Compile Include="SocketClientLibrary\Utility\TimeCounter.cs" />
+    <Compile Include="TB\AGV管理\AGV_JLPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\AGV管理\AGV_JLPS.designer.cs">
+      <DependentUpon>AGV_JLPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\AGV管理\AGV_WLPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\AGV管理\AGV_WLPS.designer.cs">
+      <DependentUpon>AGV_WLPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\供应商换货\HH_InOutStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\供应商换货\HH_InOutStock.designer.cs">
+      <DependentUpon>HH_InOutStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\供应商维修入库\TB_GYS_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\供应商维修入库\TB_GYS_InStock.designer.cs">
+      <DependentUpon>TB_GYS_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\子库移转\ZK_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\子库移转\ZK_InStock.designer.cs">
+      <DependentUpon>ZK_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\子库移转\ZK_OUT_WH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\子库移转\ZK_OUT_WH.designer.cs">
+      <DependentUpon>ZK_OUT_WH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\子库移转\ZK_InWCSStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\子库移转\ZK_InWCSStock.designer.cs">
+      <DependentUpon>ZK_InWCSStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\PAI_WH_BOX_CODE_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\PAI_WH_BOX_CODE_InStock.designer.cs">
+      <DependentUpon>PAI_WH_BOX_CODE_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\PAI_WH_CODE_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\PAI_WH_CODE_InStock.designer.cs">
+      <DependentUpon>PAI_WH_CODE_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\PAI_WH_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\PAI_WH_InStock.designer.cs">
+      <DependentUpon>PAI_WH_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\TB_WH_BOX_CODE_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\TB_WH_BOX_CODE_InStock.designer.cs">
+      <DependentUpon>TB_WH_BOX_CODE_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\TB_WH_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库入库\TB_WH_InStock.designer.cs">
+      <DependentUpon>TB_WH_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库出库\其他出库\QITA_OUT_WH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库出库\其他出库\QITA_OUT_WH.designer.cs">
+      <DependentUpon>QITA_OUT_WH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库出库\生产发料\INJECTTION_OUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库出库\生产发料\INJECTTION_OUT.designer.cs">
+      <DependentUpon>INJECTTION_OUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库出库\生产发料\INV_OUT_WH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\平库出入库\平库出库\生产发料\INV_OUT_WH.designer.cs">
+      <DependentUpon>INV_OUT_WH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\库存退库领用平台\INV_OUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\库存退库领用平台\INV_OUT.designer.cs">
+      <DependentUpon>INV_OUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\成品半成品入库\FG_WH_CODE_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\成品半成品入库\FG_WH_CODE_InStock.designer.cs">
+      <DependentUpon>FG_WH_CODE_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\成品半成品入库\BFG_WH_CODE_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\成品半成品入库\BFG_WH_CODE_InStock.designer.cs">
+      <DependentUpon>BFG_WH_CODE_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\PCBA入库\PCBA_WH_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\PCBA入库\PCBA_WH_InStock.designer.cs">
+      <DependentUpon>PCBA_WH_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\成品半成品入库\WX_WH_CODE_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\成品半成品入库\WX_WH_CODE_InStock.designer.cs">
+      <DependentUpon>WX_WH_CODE_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\成品半成品出库\TB_SalesOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\成品半成品出库\TB_SalesOut.designer.cs">
+      <DependentUpon>TB_SalesOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\成品半成品出库\TB_BCP_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\成品半成品出库\TB_BCP_Out.designer.cs">
+      <DependentUpon>TB_BCP_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\报废入库\BF_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\报废入库\BF_RETURN.designer.cs">
+      <DependentUpon>BF_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\杂项出入\ZX_OUT_WH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\杂项出入\ZX_OUT_WH.designer.cs">
+      <DependentUpon>ZX_OUT_WH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\杂项出入\ZX_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\杂项出入\ZX_InStock.designer.cs">
+      <DependentUpon>ZX_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\杂项出入\ZX_InWCSStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\杂项出入\ZX_InWCSStock.designer.cs">
+      <DependentUpon>ZX_InWCSStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\条码拆分\BarcodeCF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\条码拆分\BarcodeCF.designer.cs">
+      <DependentUpon>BarcodeCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\查询\MaterialQuery_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\查询\MaterialQuery_New.designer.cs">
+      <DependentUpon>MaterialQuery_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVEBACK20190111.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVEBACK20190111.designer.cs">
+      <DependentUpon>TB_FIELD_MATERIAL_RECEIVEBACK20190111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVEBACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVEBACK.designer.cs">
+      <DependentUpon>TB_FIELD_MATERIAL_RECEIVEBACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVE.designer.cs">
+      <DependentUpon>TB_FIELD_MATERIAL_RECEIVE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\生产退料\RM_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\生产退料\RM_RETURN.designer.cs">
+      <DependentUpon>RM_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\生产退料\RM_INV_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\生产退料\RM_INV_RETURN.designer.cs">
+      <DependentUpon>RM_INV_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\盘点操作\TB_PD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\盘点操作\TB_PD.designer.cs">
+      <DependentUpon>TB_PD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库入库\BOX_CHANNEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库入库\BOX_CHANNEL.designer.cs">
+      <DependentUpon>BOX_CHANNEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库入库\BOX_INPUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库入库\BOX_INPUT.designer.cs">
+      <DependentUpon>BOX_INPUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库入库\TB_WCS_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库入库\TB_WCS_InStock.designer.cs">
+      <DependentUpon>TB_WCS_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库出库\TB_WCS_OutStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\盘点操作\立库出入库\立库出库\TB_WCS_OutStock.designer.cs">
+      <DependentUpon>TB_WCS_OutStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\移库调拨\MOVE_OUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\移库调拨\MOVE_OUT.designer.cs">
+      <DependentUpon>MOVE_OUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\移库调拨\MOVE_IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\移库调拨\MOVE_IN.designer.cs">
+      <DependentUpon>MOVE_IN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\立库出入库\INJECTTION_LK_OUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\立库出入库\INJECTTION_LK_OUT.designer.cs">
+      <DependentUpon>INJECTTION_LK_OUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\立库出入库\TB_LK_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\立库出入库\TB_LK_InStock.designer.cs">
+      <DependentUpon>TB_LK_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LKMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LKMainFrm.Designer.cs">
+      <DependentUpon>LKMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\立库出入库\TB_LK_OutStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\立库出入库\TB_LK_OutStock.designer.cs">
+      <DependentUpon>TB_LK_OutStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\立库出入库\TB_LK_InConCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\立库出入库\TB_LK_InConCode.designer.cs">
+      <DependentUpon>TB_LK_InConCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\立库出入库\MOVE_LK_OUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\立库出入库\MOVE_LK_OUT.designer.cs">
+      <DependentUpon>MOVE_LK_OUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\采购退货发料\PO_INV_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\采购退货发料\PO_INV_RETURN.designer.cs">
+      <DependentUpon>PO_INV_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZXMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZXMainFrm.Designer.cs">
+      <DependentUpon>ZXMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGVMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGVMainFrm.Designer.cs">
+      <DependentUpon>AGVMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="登陆\越库收料\YK_WH_InStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="登陆\越库收料\YK_WH_InStock.designer.cs">
+      <DependentUpon>YK_WH_InStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\通用功能\上架\TB_UP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\通用功能\上架\TB_UP.designer.cs">
+      <DependentUpon>TB_UP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\通用功能\下架\TB_DOW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\通用功能\下架\TB_DOW.designer.cs">
+      <DependentUpon>TB_DOW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\通用功能\拆托\TB_CHAITUO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\通用功能\拆托\TB_CHAITUO.designer.cs">
+      <DependentUpon>TB_CHAITUO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\通用功能\拼托\TB_PINTUO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\通用功能\拼托\TB_PINTUO.designer.cs">
+      <DependentUpon>TB_PINTUO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\采购退货发料\PO_RM_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\采购退货发料\PO_RM_RETURN.designer.cs">
+      <DependentUpon>PO_RM_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\采购退货接收\TB_PO_RM_RECEIVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\采购退货接收\TB_PO_RM_RECEIVE.designer.cs">
+      <DependentUpon>TB_PO_RM_RECEIVE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\销售退货\FG_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\销售退货\FG_RETURN.designer.cs">
+      <DependentUpon>FG_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vibrate.cs" />
+    <Compile Include="Vibrate_PPC.cs" />
+    <Compile Include="Vibrate_SP.cs" />
+    <Compile Include="ST\下架_ZY\FrmOutstock_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\下架_ZY\FrmOutstock_New.Designer.cs">
+      <DependentUpon>FrmOutstock_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\上架_ZY\FrmInstock_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\上架_ZY\FrmInstock_New.Designer.cs">
+      <DependentUpon>FrmInstock_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstockMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstockMainFrm.Designer.cs">
+      <DependentUpon>InstockMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryMainFrm.Designer.cs">
+      <DependentUpon>QueryMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutstockMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutstockMainFrm.Designer.cs">
+      <DependentUpon>OutstockMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityMainFrm.Designer.cs">
+      <DependentUpon>QualityMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\其他领料_S203\FrmOtherOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\其他领料_S203\FrmOtherOutput.designer.cs">
+      <DependentUpon>FrmOtherOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\7C扫描_S205\Frm7CScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\7C扫描_S205\Frm7CScan.designer.cs">
+      <DependentUpon>Frm7CScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\发货打包_S103\FrmShipmentPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\发货打包_S103\FrmShipmentPacking.designer.cs">
+      <DependentUpon>FrmShipmentPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\发货打包_S103\FrmShipmentPackingSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\发货打包_S103\FrmShipmentPackingSelect.designer.cs">
+      <DependentUpon>FrmShipmentPackingSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\合并发料_S202\FrmCombineOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\合并发料_S202\FrmCombineOutput.designer.cs">
+      <DependentUpon>FrmCombineOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\手工发料\FrmSDGI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\手工发料\FrmSDGI.designer.cs">
+      <DependentUpon>FrmSDGI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TYMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TYMainFrm.Designer.cs">
+      <DependentUpon>TYMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnMainFrm.Designer.cs">
+      <DependentUpon>ReturnMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ERP_INTERFACE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="MoveMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveMainFrm.Designer.cs">
+      <DependentUpon>MoveMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="更改密码\ChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="更改密码\ChangePassWord.designer.cs">
+      <DependentUpon>ChangePassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\电阻器发货_207\DZQOutS207.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\电阻器发货_207\DZQOutS207.designer.cs">
+      <DependentUpon>DZQOutS207.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\电阻器发货_207\DZQOutS207Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\电阻器发货_207\DZQOutS207Select.designer.cs">
+      <DependentUpon>DZQOutS207Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="类库\Authority.cs" />
+    <Compile Include="ST\销售出库_S204\FrmSalesOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\销售出库_S204\FrmSalesOutput.designer.cs">
+      <DependentUpon>FrmSalesOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\工单发料_S201\FrmWOGISIGNLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\工单发料_S201\FrmWOGISIGNLE.designer.cs">
+      <DependentUpon>FrmWOGISIGNLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\来料检验_S401\FrmSQE_Recive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\来料检验_S401\FrmSQE_Recive.designer.cs">
+      <DependentUpon>FrmSQE_Recive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\来料检验_S401\FrmSQE_ReciveSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\来料检验_S401\FrmSQE_ReciveSelect.designer.cs">
+      <DependentUpon>FrmSQE_ReciveSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\生产入库_S102\FrmProductInStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\生产入库_S102\FrmProductInStock.designer.cs">
+      <DependentUpon>FrmProductInStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="类库\ButtonClass.cs" />
+    <Compile Include="类库\DeviceInfo.cs" />
+    <Compile Include="类库\IPHelper.cs" />
+    <Compile Include="类库\Reg.cs" />
+    <Compile Include="类库\SysInfo.cs" />
+    <Compile Include="ST\采购入库_S101\FrmPurcharseInStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\采购入库_S101\FrmPurcharseInStock.designer.cs">
+      <DependentUpon>FrmPurcharseInStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\其他领料_S203\批量上架_ZY\FrmInstockBatch_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\其他领料_S203\批量上架_ZY\FrmInstockBatch_New.Designer.cs">
+      <DependentUpon>FrmInstockBatch_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\报修_ZY\FrmRepair_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\报修_ZY\FrmRepair_New.designer.cs">
+      <DependentUpon>FrmRepair_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\料盘分卷_ZY\FrmMaterialSplit_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\料盘分卷_ZY\FrmMaterialSplit_New.designer.cs">
+      <DependentUpon>FrmMaterialSplit_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\查询\CartonNoQuery_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\查询\CartonNoQuery_New.designer.cs">
+      <DependentUpon>CartonNoQuery_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\查询\PartNoQuery_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\查询\PartNoQuery_New.designer.cs">
+      <DependentUpon>PartNoQuery_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\测试打印\PrintTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\测试打印\PrintTest.designer.cs">
+      <DependentUpon>PrintTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\合并\MaterialCombine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\合并\MaterialCombine.designer.cs">
+      <DependentUpon>MaterialCombine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\拆分\MaterialSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\拆分\MaterialSplit.designer.cs">
+      <DependentUpon>MaterialSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\生产拉动\ProductPull_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\生产拉动\ProductPull_New.Designer.cs">
+      <DependentUpon>ProductPull_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\移位_ZY\FrmMoveStock_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\移位_ZY\FrmMoveStock_New.designer.cs">
+      <DependentUpon>FrmMoveStock_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TB\查询\LocateQuery_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TB\查询\LocateQuery_New.designer.cs">
+      <DependentUpon>LocateQuery_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\移库\FrmMoveStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\移库\FrmMoveStock.designer.cs">
+      <DependentUpon>FrmMoveStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="类库\User.cs" />
+    <Compile Include="Web References\PDAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="类库\WebServer.cs" />
+    <Compile Include="ST\入库\FrmInstock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\入库\FrmInstock.Designer.cs">
+      <DependentUpon>FrmInstock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\盘点\FrmCheckStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\盘点\FrmCheckStock.Designer.cs">
+      <DependentUpon>FrmCheckStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="登陆\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IP设置\SetIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="类库\xmlDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ST\采购收货_S300\FrmPurcharseReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\采购收货_S300\FrmPurcharseReceipt.designer.cs">
+      <DependentUpon>FrmPurcharseReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ST\领料\FrmPickMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ST\领料\FrmPickMaterial.Designer.cs">
+      <DependentUpon>FrmPickMaterial.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ST\COP发货_S206\COPOutS206.resx">
+      <DependentUpon>COPOutS206.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\COP发货_S206\COPOutS206Select.resx">
+      <DependentUpon>COPOutS206Select.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IP设置\ValidationPwd.resx">
+      <DependentUpon>ValidationPwd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\SMT发料\FrmSMTGI.resx">
+      <DependentUpon>FrmSMTGI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\下架_ZY\FrmOutstock_New.resx">
+      <DependentUpon>FrmOutstock_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\入库\FrmInstock.resx">
+      <DependentUpon>FrmInstock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\上架_ZY\FrmInstock_New.resx">
+      <DependentUpon>FrmInstock_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstockMainFrm.resx">
+      <DependentUpon>InstockMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryMainFrm.resx">
+      <DependentUpon>QueryMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutstockMainFrm.resx">
+      <DependentUpon>OutstockMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityMainFrm.resx">
+      <DependentUpon>QualityMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\其他领料_S203\FrmOtherOutput.resx">
+      <DependentUpon>FrmOtherOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\7C扫描_S205\Frm7CScan.resx">
+      <DependentUpon>Frm7CScan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\发货打包_S103\FrmShipmentPacking.resx">
+      <DependentUpon>FrmShipmentPacking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\发货打包_S103\FrmShipmentPackingSelect.resx">
+      <DependentUpon>FrmShipmentPackingSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\合并发料_S202\FrmCombineOutput.resx">
+      <DependentUpon>FrmCombineOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\手工发料\FrmSDGI.resx">
+      <DependentUpon>FrmSDGI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\AGV管理\AGV_JLPS.resx">
+      <DependentUpon>AGV_JLPS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\AGV管理\AGV_WLPS.resx">
+      <DependentUpon>AGV_WLPS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\供应商换货\HH_InOutStock.resx">
+      <DependentUpon>HH_InOutStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\供应商维修入库\TB_GYS_InStock.resx">
+      <DependentUpon>TB_GYS_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\子库移转\ZK_InStock.resx">
+      <DependentUpon>ZK_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\子库移转\ZK_OUT_WH.resx">
+      <DependentUpon>ZK_OUT_WH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\子库移转\ZK_InWCSStock.resx">
+      <DependentUpon>ZK_InWCSStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库入库\PAI_WH_BOX_CODE_InStock.resx">
+      <DependentUpon>PAI_WH_BOX_CODE_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库入库\PAI_WH_CODE_InStock.resx">
+      <DependentUpon>PAI_WH_CODE_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库入库\PAI_WH_InStock.resx">
+      <DependentUpon>PAI_WH_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库入库\TB_WH_BOX_CODE_InStock.resx">
+      <DependentUpon>TB_WH_BOX_CODE_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库入库\TB_WH_InStock.resx">
+      <DependentUpon>TB_WH_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库出库\其他出库\QITA_OUT_WH.resx">
+      <DependentUpon>QITA_OUT_WH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库出库\生产发料\INJECTTION_OUT.resx">
+      <DependentUpon>INJECTTION_OUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\平库出入库\平库出库\生产发料\INV_OUT_WH.resx">
+      <DependentUpon>INV_OUT_WH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\库存退库领用平台\INV_OUT.resx">
+      <DependentUpon>INV_OUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\成品半成品入库\FG_WH_CODE_InStock.resx">
+      <DependentUpon>FG_WH_CODE_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\成品半成品入库\BFG_WH_CODE_InStock.resx">
+      <DependentUpon>BFG_WH_CODE_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\PCBA入库\PCBA_WH_InStock.resx">
+      <DependentUpon>PCBA_WH_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\成品半成品入库\WX_WH_CODE_InStock.resx">
+      <DependentUpon>WX_WH_CODE_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\成品半成品出库\TB_SalesOut.resx">
+      <DependentUpon>TB_SalesOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\成品半成品出库\TB_BCP_Out.resx">
+      <DependentUpon>TB_BCP_Out.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\报废入库\BF_RETURN.resx">
+      <DependentUpon>BF_RETURN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\杂项出入\ZX_OUT_WH.resx">
+      <DependentUpon>ZX_OUT_WH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\杂项出入\ZX_InStock.resx">
+      <DependentUpon>ZX_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\杂项出入\ZX_InWCSStock.resx">
+      <DependentUpon>ZX_InWCSStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\条码拆分\BarcodeCF.resx">
+      <DependentUpon>BarcodeCF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\查询\MaterialQuery_New.resx">
+      <DependentUpon>MaterialQuery_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVEBACK20190111.resx">
+      <DependentUpon>TB_FIELD_MATERIAL_RECEIVEBACK20190111.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVEBACK.resx">
+      <DependentUpon>TB_FIELD_MATERIAL_RECEIVEBACK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\现场来料接收\TB_FIELD_MATERIAL_RECEIVE.resx">
+      <DependentUpon>TB_FIELD_MATERIAL_RECEIVE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\生产退料\RM_RETURN.resx">
+      <DependentUpon>RM_RETURN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\生产退料\RM_INV_RETURN.resx">
+      <DependentUpon>RM_INV_RETURN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\盘点操作\TB_PD.resx">
+      <DependentUpon>TB_PD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\盘点操作\立库出入库\立库入库\BOX_CHANNEL.resx">
+      <DependentUpon>BOX_CHANNEL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\盘点操作\立库出入库\立库入库\BOX_INPUT.resx">
+      <DependentUpon>BOX_INPUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\盘点操作\立库出入库\立库入库\TB_WCS_InStock.resx">
+      <DependentUpon>TB_WCS_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\盘点操作\立库出入库\立库出库\TB_WCS_OutStock.resx">
+      <DependentUpon>TB_WCS_OutStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\移库调拨\MOVE_OUT.resx">
+      <DependentUpon>MOVE_OUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\移库调拨\MOVE_IN.resx">
+      <DependentUpon>MOVE_IN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\立库出入库\INJECTTION_LK_OUT.resx">
+      <DependentUpon>INJECTTION_LK_OUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\立库出入库\TB_LK_InStock.resx">
+      <DependentUpon>TB_LK_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LKMainFrm.resx">
+      <DependentUpon>LKMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\立库出入库\TB_LK_OutStock.resx">
+      <DependentUpon>TB_LK_OutStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\立库出入库\TB_LK_InConCode.resx">
+      <DependentUpon>TB_LK_InConCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\立库出入库\MOVE_LK_OUT.resx">
+      <DependentUpon>MOVE_LK_OUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\采购退货发料\PO_INV_RETURN.resx">
+      <DependentUpon>PO_INV_RETURN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZXMainFrm.resx">
+      <DependentUpon>ZXMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGVMainFrm.resx">
+      <DependentUpon>AGVMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="登陆\越库收料\YK_WH_InStock.resx">
+      <DependentUpon>YK_WH_InStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\通用功能\上架\TB_UP.resx">
+      <DependentUpon>TB_UP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\通用功能\下架\TB_DOW.resx">
+      <DependentUpon>TB_DOW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\通用功能\拆托\TB_CHAITUO.resx">
+      <DependentUpon>TB_CHAITUO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\通用功能\拼托\TB_PINTUO.resx">
+      <DependentUpon>TB_PINTUO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\采购退货发料\PO_RM_RETURN.resx">
+      <DependentUpon>PO_RM_RETURN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\采购退货接收\TB_PO_RM_RECEIVE.resx">
+      <DependentUpon>TB_PO_RM_RECEIVE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\销售退货\FG_RETURN.resx">
+      <DependentUpon>FG_RETURN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TYMainFrm.resx">
+      <DependentUpon>TYMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnMainFrm.resx">
+      <DependentUpon>ReturnMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveMainFrm.resx">
+      <DependentUpon>MoveMainFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="更改密码\ChangePassWord.resx">
+      <DependentUpon>ChangePassWord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\电阻器发货_207\DZQOutS207.resx">
+      <DependentUpon>DZQOutS207.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\电阻器发货_207\DZQOutS207Select.resx">
+      <DependentUpon>DZQOutS207Select.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\销售出库_S204\FrmSalesOutput.resx">
+      <DependentUpon>FrmSalesOutput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\工单发料_S201\FrmWOGISIGNLE.resx">
+      <DependentUpon>FrmWOGISIGNLE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\来料检验_S401\FrmSQE_Recive.resx">
+      <DependentUpon>FrmSQE_Recive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\来料检验_S401\FrmSQE_ReciveSelect.resx">
+      <DependentUpon>FrmSQE_ReciveSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\生产入库_S102\FrmProductInStock.resx">
+      <DependentUpon>FrmProductInStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\采购入库_S101\FrmPurcharseInStock.resx">
+      <DependentUpon>FrmPurcharseInStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\其他领料_S203\批量上架_ZY\FrmInstockBatch_New.resx">
+      <DependentUpon>FrmInstockBatch_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\报修_ZY\FrmRepair_New.resx">
+      <DependentUpon>FrmRepair_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\料盘分卷_ZY\FrmMaterialSplit_New.resx">
+      <DependentUpon>FrmMaterialSplit_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\查询\CartonNoQuery_New.resx">
+      <DependentUpon>CartonNoQuery_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\查询\PartNoQuery_New.resx">
+      <DependentUpon>PartNoQuery_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\测试打印\PrintTest.resx">
+      <DependentUpon>PrintTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\合并\MaterialCombine.resx">
+      <DependentUpon>MaterialCombine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\拆分\MaterialSplit.resx">
+      <DependentUpon>MaterialSplit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\生产拉动\ProductPull_New.resx">
+      <DependentUpon>ProductPull_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\盘点\FrmCheckStock.resx">
+      <DependentUpon>FrmCheckStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="登陆\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IP设置\SetIP.resx">
+      <DependentUpon>SetIP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\移位_ZY\FrmMoveStock_New.resx">
+      <DependentUpon>FrmMoveStock_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TB\查询\LocateQuery_New.resx">
+      <DependentUpon>LocateQuery_New.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\移库\FrmMoveStock.resx">
+      <DependentUpon>FrmMoveStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\采购收货_S300\FrmPurcharseReceipt.resx">
+      <DependentUpon>FrmPurcharseReceipt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ST\领料\FrmPickMaterial.resx">
+      <DependentUpon>FrmPickMaterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="20141012101920603_easyicon_net_48.ico" />
+    <Content Include="App.ico" />
+    <Content Include="Library\ADOHelper.dll" />
+    <Content Include="Library\CompactFormatterPlus.dll" />
+    <Content Include="Library\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Library\ISerial.dll" />
+    <Content Include="Library\Message.dll" />
+    <Content Include="Library\Midapex.dll" />
+    <None Include="Web References\ERP_INTERFACE\Interface_Service.disco" />
+    <None Include="Web References\ERP_INTERFACE\Interface_Service.wsdl" />
+    <None Include="Web References\ERP_INTERFACE\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PDAService\PDAService.disco" />
+    <None Include="Web References\PDAService\PDAService.wsdl" />
+    <None Include="Web References\PDAService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.24.105.80:8045/Interface_Service.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ERP_INTERFACE\</RelPath>
+      <UpdateFromURL>http://172.24.105.80:8045/Interface_Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:1460/WebService/PDAService.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\PDAService\</RelPath>
+      <UpdateFromURL>http://localhost:1460/WebService/PDAService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+</Project>
